@@ -45,9 +45,6 @@ class MasalaTea:public Tea{
 
 };
 
-
-
-
 int main(){
     Greentea g;
     MasalaTea m;
