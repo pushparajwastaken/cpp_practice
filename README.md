@@ -1,6 +1,4 @@
-Here's a `README.md` for your C++ practice repository:  
 
----
 
 ```md
 # C++ Practice
@@ -31,6 +29,4 @@ This repository contains various C++ programs and exercises for practicing funda
 Contributions are welcome! Feel free to submit pull requests with improvements or new problems.
 
 
-Happy Coding! 🚀
-```
-\
+
