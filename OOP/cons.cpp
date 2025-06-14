@@ -20,7 +20,7 @@ class Chai{
     // Chai(){
     //     teaname="Unknown Tea";
     //     servings=2;
-    //     ingredients={"Tea Leaves","Water"};
+    //     ingredients={"Tea Leaves","Water"};this means setting the value not actually printing them
     //     cout<<"Constructor Called"<<endl;
     // }
 
@@ -37,7 +37,8 @@ class Chai{
     }
     //the need for copy constructor arises when you try to access memory that has been freed
     //COPY CONSTRUCTOR
-
+    
+//const keyword is used so that the values of the teaname,servings,ingredients cannot be changed
     Chai(const Chai& other){//this type of parameter is passed to say that give me the reference of the whole object incase of pointers
     //other is just a variable you can name it anything it has the refernce of whole chai
     teaname=new string(*other.teaname);//this means that teaname is a pointer 
@@ -76,7 +77,7 @@ int main(){
     Chai copiedchai=lemontea;/*if you just want to copy the object thisis the ideal way
     // to copy it from a to z*/
     //copiedchai.displaychai();
-
+//after making a copy like this the copiedchai and lemontea will have same data but changing the data of original will not affect the copiedchai
     *lemontea.teaname="modified tea";
     cout<<"Lemon Tea: "<<endl;
     lemontea.displaychai();
@@ -87,3 +88,4 @@ int main(){
     return 0;
 
 }
+//if you want to copy the values of default value of an object then copy constructor is called
