@@ -4,6 +4,7 @@ using namespace std;
 //we generally just make variables and functions inside class
 class Chai
 {
+//default access is private in a class and public in a struct or union
     public:
     //data members(attributes)-a fancy name for variables
         string teaname;
