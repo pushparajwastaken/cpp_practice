@@ -10,7 +10,7 @@ class Tea{
     int servings;
     public:
     Tea(string name,int servs):teanme(name),servings(servs){
-
+        cout<<"Tea Constructor Called "<< teanme <<endl;
     }
     virtual void brew() const{
         cout<<"Brewing "<<teanme<<"with generic method"<<endl;
@@ -29,7 +29,7 @@ class Tea{
 };
 class Greentea:public Tea{
     public:
-    Greentea(int servings):Tea("Green Tea",servings){
+    Greentea(int servings):Tea("Green Tea",servings){//this calls the constructor from the tea class and passes the value
         cout<<"Green Tea object created"<<endl;
     }
     //final keyword ka mtlb hai iske baad se koi bhi agar iss class ko inherit kare toh iss method ko override nahi kar sake
@@ -44,7 +44,7 @@ class Greentea:public Tea{
     };
 };
 int main(){
-    Tea* tea1=new Greentea(2);
+    Tea* tea1=new Greentea(2);//we made pointers not objects
     tea1->maketea();
     delete tea1;
     return 0;
