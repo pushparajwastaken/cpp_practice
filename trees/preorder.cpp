@@ -10,13 +10,13 @@ struct Node{
     }
     
 };
-void inorder(Node* node){
+void preorder(Node* node){
     if(node==NULL){
         return;
     }
-    inorder(node->left);
     cout<<node->data<<", ";
-    inorder(node->right);
+    preorder(node->left);
+    preorder(node->right);
 }
 int main(){
     Node* root=new Node(1);
@@ -24,6 +24,6 @@ int main(){
     root->right=new Node(3);
     root->left->left=new Node(4);
     root->left->right=new Node(5);
-    inorder(root);
+    preorder(root);
     return 0;
 }
