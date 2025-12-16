@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Asus/OneDrive/문서/cpp",
-      "program": "c:/Users/Asus/OneDrive/문서/cpp/build/Debug/outDebug",
+      "cwd": "c:/Users/Asus/Videos/cpp_practice/college/strings",
+      "program": "c:/Users/Asus/Videos/cpp_practice/college/strings/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
