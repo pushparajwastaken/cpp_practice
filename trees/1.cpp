@@ -1,19 +1,40 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-struct Node{
+
+class Node {
+public:
     int data;
     Node* left;
-    Node * right;
-    Node(int val){
-        data=val;
-        left=right=NULL;
+    Node* right;
+
+    Node(int data) {
+        this->data = data;
+        left = NULL;
+        right = NULL;
     }
 };
-int main(){
-    Node* root=new Node(1);
-    root->left=new Node(2);
-    root->right=new Node(3);
-    root->left->left=new Node(4);
-    root->left->right=new Node(5);
+
+Node* createTree() {
+    int data;
+    cout << "Enter element (-1 for NULL): ";
+    cin >> data;
+
+    if (data == -1) {
+        return NULL;
+    }
+
+    Node* root = new Node(data);
+
+    cout << "Enter left child of " << data << endl;
+    root->left = createTree();
+
+    cout << "Enter right child of " << data << endl;
+    root->right = createTree();
+
+    return root;
+}
+
+int main() {
+    Node* root = createTree();
     return 0;
 }
